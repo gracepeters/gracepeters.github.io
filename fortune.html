@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <h5>Fortune Teller</h5>
+    <style media="screen">
+    html {
+      background: url("https://media.giphy.com/media/10TI5vPyELuuHu/giphy.gif");
+    }
+    h5 {
+      color: white;
+      font-size: 90px
+    }
+    p {
+      color: white;
+      font-size: 70px
+    }
+    button {
+      font-size: 30px
+    }
+    </style>
+
+
+  </head>
+  <body>
+    <p>Lets play this fortune teller game! Click the button below to get your fortunes!</p>
+    <p id= "Fortunes">Click below</p>
+    <button onclick="myFunction()"> Click me </button>
+    <script type="text/javascript">
+    function myFunction() {
+      var element = document.getElementById('Fortunes');
+      var Fortunes = ['You will win the lottery!','You will lose all of your money','You will find 100 dollars on the street!','You will meet the love of your life this month!','You will never have to answer an icebreaker again!','You will get struck by lightning','You will be eaten by a horse','Jess will show you a picture of her boyfriend','You will never see a picture of Jess boyfriend','You will eat a horse'];
+      var randomNumber = Math.floor(Math.random()*10)
+      console.log(randomNumber);
+      element.innerText = Fortunes[randomNumber];
+    }
+    </script>
+  </body>
+</html>
